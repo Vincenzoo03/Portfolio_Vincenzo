@@ -1,0 +1,237 @@
+:root {
+    --primary-color: #2563eb; 
+    --primary-hover: #1d4ed8;
+    --bg-color: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --card-bg: #ffffff;
+    --header-bg: #0f172a; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.header {
+    background-color: var(--header-bg);
+    color: white;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: white;
+}
+
+.main-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 15px;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+.about-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex-shrink: 0;
+}
+
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.education-item {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #10b981;
+    margin-bottom: 20px;
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
+}
+
+.education-item h3 {
+    margin-bottom: 5px;
+    color: var(--text-main);
+}
+
+.education-item .date {
+    color: #10b981;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-item {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.project-item h3 {
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-badge {
+    background-color: #dbeafe;
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid #bfdbfe;
+}
+
+.contact-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.contact-list li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.contact-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-card {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 20px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+.skills-category-title {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+}
